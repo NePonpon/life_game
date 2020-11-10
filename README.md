@@ -25,11 +25,11 @@
 ---
 ### アイテムの取得方法
 このデータパックでは５つのアイテムを使ってシミュレーションを実行します。
-    1.セル(状態切り替え) - アーマースタンド
-    2.時間進行棒 (常時進行) - 棒
-    3.時間進行棒 (一回進行) - 人参付きの棒
-    4.時間制御棒 - 人参付きの棒
-    5.リセット棒 - 人参付きの棒
+1 セル(状態切り替え) - アーマースタンド
+2 時間進行棒 (常時進行) - 棒
+3 時間進行棒 (一回進行) - 人参付きの棒
+4 時間制御棒 - 人参付きの棒
+5 リセット棒 - 人参付きの棒
     
 `/function life_game:item_get`のコマンドをチャットから実行すると上のアイテムを取得できます。
 
@@ -68,17 +68,17 @@
 ## 技術情報
 ##### 使用スコア名
 
->LifeGameCore
-LifeGameDisplay
-LifeGameCells
-LifeGameClick
+>LifeGameCore ,
+>LifeGameDisplay ,
+>LifeGameCells ,
+>LifeGameClick ,
 
 ##### 使用タグ名
->LifeGame
-Live
-Death
-set
-seted
+>LifeGame ,
+>Live ,
+>Death ,
+>set ,
+>seted ,
 
 ##### 更新内容
 ver 1.0
