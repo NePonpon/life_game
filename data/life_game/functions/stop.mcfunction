@@ -1,3 +1,11 @@
+#> life_game:stop
+#
+# ゲームの状態をリセットします。
+#
+# @within
+#   function life_game:tick
+# @user
+
 scoreboard players set 現在の世代 LifeGameDisplay 0
 tellraw @a [{"text": "世代数をリセットしました","bold": true}]
 scoreboard players set Loop_waiting LifeGameCore 0

@@ -1,3 +1,10 @@
+#> life_game:tick
+#
+# tick処理  
+# ゲームの状態を管理する
+#
+# @within tag/function minecraft:tick
+
 #生存セル重複時死亡処理
 execute as @e[tag=seted] run execute as @s store result score @s LifeGameCore at @s run execute if entity @e[tag=set,distance=0..0.2]
 execute as @e[tag=seted,scores={LifeGameCore=1..}] at @s run kill @e[tag=set,distance=0..0.2]

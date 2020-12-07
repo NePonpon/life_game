@@ -1,3 +1,10 @@
+#> life_game:load
+#
+# 初期設定をします。  
+# 設定をリセットします。
+#
+# @within  tag/function minecraft:load
+
 scoreboard objectives add LifeGameCore dummy {"text": "ライフゲーム・コア"}
 scoreboard objectives add LifeGameDisplay dummy {"text": "ライフゲームの情報"}
 scoreboard objectives add LifeGameCells dummy {"text": "ライフゲーム・セル管理"}

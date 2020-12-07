@@ -1,3 +1,10 @@
+#> life_game:main
+#
+# ライフゲームの世代を進めるための処理  
+# セルが生存・死亡する
+#
+# @within function life_game:tick
+
 #生存セルの周りに死亡セルを設置
 execute as @e[tag=Live] at @s positioned ~1 ~ ~ unless entity @e[distance=..0.2,tag=LifeGame] run summon armor_stand ~ ~ ~ {Tags:["LifeGame","Death"],Small:true,Invisible:true,Marker:true,NoGravity:true}
 execute as @e[tag=Live] at @s positioned ~-1 ~ ~ unless entity @e[distance=..0.2,tag=LifeGame] run summon armor_stand ~ ~ ~ {Tags:["LifeGame","Death"],Small:true,Invisible:true,Marker:true,NoGravity:true}
