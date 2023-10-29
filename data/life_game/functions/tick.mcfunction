@@ -10,6 +10,9 @@ execute as @e[tag=seted] store result score @s LifeGameCore at @s if entity @e[t
 execute as @e[tag=seted,scores={LifeGameCore=1..}] at @s run kill @e[tag=set,distance=0..0.2]
 execute as @e[tag=seted,scores={LifeGameCore=1..}] at @s run setblock ~ ~-1 ~ black_concrete
 
+#オフハンドのアイテムを生存セルのブロックに設定
+execute as @a if data entity @s {Inventory:[{Slot:-106b}]} run data modify storage life_game:settings _.live_block set from entity @s Inventory[{Slot:-106b}].id
+
 #セルの生存、死亡のブロック設置処理
 execute as @e[tag=set] at @s unless block ~ ~-1 ~ lime_concrete run setblock ~ ~-1 ~ lime_concrete
 execute as @e[tag=set] at @s if block ~ ~-1 ~ lime_concrete run tag @s add seted
