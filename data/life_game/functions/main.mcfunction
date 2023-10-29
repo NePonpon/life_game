@@ -16,8 +16,8 @@ execute as @e[tag=Live] at @s positioned ~-1 ~ ~1 unless entity @e[distance=..0.
 execute as @e[tag=Live] at @s positioned ~-1 ~ ~-1 unless entity @e[distance=..0.2,tag=LifeGame] run summon marker ~ ~ ~ {Tags:["LifeGame","Death"]}
 
 #生存セル、死亡セルの周りの生存セルの数を取得
-execute as @e[tag=LifeGame] run execute as @s[tag=Live] store result score @s LifeGameCore run execute as @s at @s if entity @e[tag=Live,distance=0.1..1.5]
-execute as @e[tag=LifeGame] run execute as @s[tag=Death] store result score @s LifeGameCore run execute as @s at @s if entity @e[tag=Live,distance=0.1..1.5]
+execute as @e[tag=Live] store result score @s LifeGameCore at @s if entity @e[tag=Live,distance=0.1..1.5]
+execute as @e[tag=Death] store result score @s LifeGameCore at @s if entity @e[tag=Live,distance=0.1..1.5]
 
 #scoreboard players remove @e[tag=LifeGame] LifeGameCore 1
 
