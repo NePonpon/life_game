@@ -29,9 +29,14 @@ scoreboard players set warm LifeGameCore 0
 
 scoreboard objectives setdisplay sidebar LifeGameDisplay
 
+#declare storage life_game:settings
+
 #必要なゲーム設定
 gamerule sendCommandFeedback false
 gamerule logAdminCommands false
 gamerule doMobSpawning false
 gamerule doDaylightCycle false
 gamerule doWeatherCycle false
+
+#生存セルのブロック
+data modify storage life_game:settings _.live_block set value "minecraft:lime_concrete"
