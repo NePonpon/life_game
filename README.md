@@ -92,7 +92,7 @@ ver 2.0
 * Minecraft ver1.20.2に対応しました。
 * ライフゲームのフィールドをワールドタイプで選択できるようにしました。
 * 生存セルのブロックを設定できるようにしました。
-> 詳しい変更ログは[こちらのGithubリポジトリ](https://github.com/NePonpon/life_game/compare/ver-1.0...ver-2.0)にて確認してください。
+> 詳しい変更は[こちらのコミットログ](https://github.com/NePonpon/life_game/compare/ver-1.0...ver-2.0)にて確認してください。
 
 ---  
 ## 問い合わせ
