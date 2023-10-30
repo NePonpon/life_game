@@ -14,8 +14,8 @@ execute as @e[tag=seted,scores={LifeGameCore=1..}] at @s run setblock ~ ~-1 ~ bl
 execute as @a if data entity @s {Inventory:[{Slot:-106b}]} run data modify storage life_game:settings _.live_block set from entity @s Inventory[{Slot:-106b}].id
 
 #セルの生存、死亡のブロック設置処理
-execute if entity @e[tag=set] run function life_game:block_set.macro with storage life_game:settings _
-execute as @a at @s as @e[tag=seted,distance=..10] at @s run function life_game:block_seted.macro with storage life_game:settings _
+execute if entity @e[tag=set,tag=!seted] run function life_game:block_set.macro with storage life_game:settings _
+execute if entity @e[tag=seted] run function life_game:block_seted.macro with storage life_game:settings _
 
 #次の世代までの残りtick調整
 execute as @a[scores={LifeGameClick=1..}] if data entity @s {SelectedItem:{tag:{waitset:true}}} run tellraw @s [{"text": "次の世代までのtick数を設定します。\n数字をクリックして調節して下さい\n","color": "dark_aqua","bold":true},{"text": "注意:2tick未満にすることは出来ません\n\n","color": "red","bold": false},{"text": " "},{"text": "-10","bold": true,"clickEvent": {"action": "run_command","value": "/scoreboard players remove 次の世代までの残りtick LifeGameDisplay 10"}},{"text": "  "},{"text": "-1","clickEvent": {"action":"run_command","value": "/scoreboard players remove 次の世代までの残りtick LifeGameDisplay 1"}},{"text": "  "},{"text": "+1","clickEvent": {"action":"run_command","value": "/scoreboard players add 次の世代までの残りtick LifeGameDisplay 1"}},{"text": "  "},{"text": "+10","clickEvent": {"action":"run_command","value": "/scoreboard players add 次の世代までの残りtick LifeGameDisplay 10"}}]
